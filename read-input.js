@@ -1,9 +1,15 @@
-const readFile = require('bluebird').promisify(require('fs').readFile)
+const fs = require('fs')
 
-module.exports = (cb) => 
-  readFile('input.txt', 'utf-8')
-    .then(cb)
-    .then(console.log.bind(console))
-    .catch((e) => {
-      console.error(e.message)
-    })
+module.exports = (cb) => new Promise((resolve, reject) => {
+  fs.readFile('input.txt', 'utf-8', (err, data) => {
+    if (err) {
+      return reject(err)
+    }
+
+    return resolve(data)
+  })
+}).then(cb)
+  .then(console.log)
+  .catch((e) => {
+    console.error(e.message)
+  })
