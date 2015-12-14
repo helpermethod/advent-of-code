@@ -1,6 +1,6 @@
 'use strict'
 
-const readInput = require('../read-input.js')
+const readInput = require('../read-input')
 
 function index(chars, floor, i) {
   if (floor === -1) {

@@ -1,4 +1,4 @@
-const readInput = require('../read-input.js')
+const readInput = require('../read-input')
 
 module.exports = cb => {
   readInput(data => data.split('\n').reduce((prev, curr) => {

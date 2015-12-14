@@ -1,6 +1,6 @@
 'use strict'
 
-const readInput = require('../read-input.js')
+const readInput = require('../read-input')
 const argv = require('yargs').default('n', 1).argv
 
 readInput(data => {
