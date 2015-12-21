@@ -10,6 +10,4 @@ module.exports = (cb) => new Promise((resolve, reject) => {
   })
 }).then(cb)
   .then(console.log)
-  .catch((e) => {
-    console.error(e.message)
-  })
+  .catch(e => console.error(e.message))

@@ -3,14 +3,14 @@
 const crypto = require('crypto')
 const argv = require('yargs').default('p', '00000').string('p').argv
 
-for (const d of decimals()) {
+for (const n of naturals()) {
   if (crypto.createHash('md5').update(`ckczppom${d}`).digest('hex').startsWith(argv.p)) {
-    console.log(d)
+    console.log(n)
     process.exit()
   }
 }
 
-function* decimals() {
+function* naturals() {
   for (let i = 1;; i++) {
     yield i
   }

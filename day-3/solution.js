@@ -23,6 +23,6 @@ readInput(data => {
         coord[1]++
     }
 
-    return prev.add(`${coord[0]}-${coord[1]}`)
-  }, new Set(['0-0'])).size
+    return prev.add(`${coord[0]},${coord[1]}`)
+  }, new Set(['0,0'])).size
 })
