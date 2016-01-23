@@ -10,7 +10,7 @@ setup({
   'turn off': function(x, y) {
     this.coords[x][y] = 0
   },
-  'toggle': function(x, y) {
+  toggle: function(x, y) {
     this.coords[x][y] = (this.coords[x][y] + 1) % 2 
   }
 })
